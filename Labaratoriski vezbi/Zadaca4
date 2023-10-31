@@ -1,0 +1,40 @@
+#include <iostream>
+using namespace std;
+
+//Да се провери дали внесениот број кој треба да е шестцифрен е симетричен. Тоа значи првата цифра на бројот
+//да е еднаква со последната, втората цифра со претпоследната итн... Пример за симетрични броеви: 123321...
+//Да се испечати 1 ако е симетричен, 0 ако не е симетричен.
+
+int main() {
+
+    int broj, palindrom = 0, PocetenBroj, PrivremenBroj;
+    cin>>broj; //12321
+
+    PocetenBroj = broj;
+
+
+    while(broj != 0) {
+        PrivremenBroj = broj % 10;  // 12321 ja zemame poslednata cifra 1 zatoa % 10.
+        palindrom = palindrom * 10 + PrivremenBroj;
+        broj = broj / 10;  // Ovoa ni e za brojot da se cepka   12321 da se trgne 1 pa da se trgne 2 pa da
+        // se trgne 3... i dodeka ne dojde do 0 za while ciklusot da prestane.
+    }
+//12321
+//PrivremenBroj = 12321 % 10 = 1
+// 1:  Palindrom = 0
+//Palindrom = 0 * 10 + 1
+//Pal = 1
+// 2:  Palindrom = 1 * 10 + 2
+// Pal = 12
+// 3: Palindrom = 12 * 10 + 3
+//Pal = 123
+//.............
+
+      if(PocetenBroj == palindrom){
+          cout<<"1";
+      }
+      else {
+          cout<<"0";
+      }
+    return 0;
+}

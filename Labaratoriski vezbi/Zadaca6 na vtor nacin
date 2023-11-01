@@ -1,0 +1,35 @@
+#include <iostream>
+
+//За еден студент се читаат освоени поени од 5 активности за еден предмет. Услов за еден предмет
+// да е положен е да се имаат над 50 освоени бодови. Ако студентот има 0-50 поени не го положил преметот
+//ако има 51-60 го положил предметот со 6
+// 61-70 го положил со 7
+// 71-80 го положил со 8
+//81-90 го положил со 9
+//91-100 го положил со 10.
+//Да се испечати оценката која ја имал студентот, неговите поени и да се испечати Ima uslov za povisoks ocena
+//Доколку има услов да добие повисока оцена, а во спротивно да се испечати Nema uslov za povisoka ocena.
+//Услов за повисока оцена има ако недостига 1 поен за добивање повисока оцена.
+
+using namespace std;
+
+int main() {
+
+    int b1, b2, b3, b4, b5, Vkupnobodovi;
+    cin >> b1 >> b2 >> b3 >> b4 >> b5;
+
+    Vkupnobodovi = b1 + b2 + b3 + b4 + b5;
+
+    if(Vkupnobodovi>50){
+        cout<<"Ocena: "<<(Vkupnobodovi + 9)/10<<endl;
+        cout<<"Bodovi: "<<Vkupnobodovi<<endl;
+        if(Vkupnobodovi%10==0){
+            cout<<"Ima uslov za povisoka ocena"<<endl;
+        }else{
+            cout<<"Nema uslov za povisoka ocena"<<endl;
+        }
+    }else
+        cout<<"Predmetot ne e polozen"<<endl;
+    
+     return 0;
+    }

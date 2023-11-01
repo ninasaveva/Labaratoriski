@@ -1,0 +1,69 @@
+#include <iostream>
+
+//За еден студент се читаат освоени поени од 5 активности за еден предмет. Услов за еден предмет
+// да е положен е да се имаат над 50 освоени бодови. Ако студентот има 0-50 поени не го положил преметот
+//ако има 51-60 го положил предметот со 6
+// 61-70 го положил со 7
+// 71-80 го положил со 8
+//81-90 го положил со 9
+//91-100 го положил со 10.
+//Да се испечати оценката која ја имал студентот, неговите поени и да се испечати Ima uslov za povisoks ocena
+//Доколку има услов да добие повисока оцена, а во спротивно да се испечати Nema uslov za povisoka ocena.
+//Услов за повисока оцена има ако недостига 1 поен за добивање повисока оцена.
+
+using namespace std;
+
+int main() {
+
+        int b1, b2, b3, b4, b5, bodovi;
+        cin >> b1 >> b2 >> b3 >> b4 >> b5;
+
+        bodovi = b1 + b2 + b3 + b4 + b5;
+
+        if (bodovi >= 0 && bodovi <= 50) {
+            cout << "Predmetot ne e polozen" << endl;
+        } else if (bodovi >= 51 && bodovi <= 60) {
+            cout << "Ocena: 6, " << "poeni: " << bodovi << endl;
+            if (bodovi == 59) {
+                cout << "Ima uslov za povisoka ocena" << endl;
+            } else {
+                cout << "Nema uslov za povisoka ocena" << endl;
+            }
+        } else if (bodovi >= 61 && bodovi <= 70) {
+            cout << "Ocena: 7, " << "poeni: " << bodovi << endl;
+            if (bodovi == 69) {
+                cout << "Ima uslov za povisoka ocena" << endl;
+            } else {
+                cout << "Nema uslov za povisoka ocena" << endl;
+            }
+        } else if (bodovi >= 71 && bodovi <= 80) {
+            cout << "Ocena: 8, " << "poeni: " << bodovi << endl;
+            if (bodovi == 79) {
+                cout << "Ima uslov za povisoka ocena" << endl;
+            } else {
+                cout << "Nema uslov za povisoka ocena" << endl;
+            }
+        } else if (bodovi >= 81 && bodovi <= 90) {
+            cout << "Ocena: 9, " << "poeni: " << bodovi << endl;
+            if (bodovi == 89) {
+                cout << "Ima uslov za povisoka ocena" << endl;
+            } else {
+                cout << "Nema uslov za povisoka ocena" << endl;
+            }
+        } else if (bodovi >= 91 && bodovi <= 100) {
+            cout << "Ocena: 10, " << "poeni: " << bodovi << endl;
+            if (bodovi == 99) {
+                cout << "Ima uslov za povisoka ocena" << endl;
+            } else {
+                cout << "Nema uslov za povisoka ocena" << endl;
+            }
+        }
+
+
+    
+
+    return 0;
+
+}
+
+

@@ -11,13 +11,13 @@ int main() {
     int broj1,broj2,broj3;
     cin>>broj1>>broj2>>broj3;
 
-    if(broj1<broj2 && broj1<broj3){
+    if(broj1<=broj2 && broj1<=broj3){
         cout<<"Najmala vrednost ima brojot  "<<broj1<<endl;
     }
-    else if(broj2<broj1 && broj2<broj3){
+    else if(broj2<=broj1 && broj2<=broj3){
         cout<<"Najmala vrednost ima brojot  "<<broj2<<endl;
     }
-    else if(broj3<broj1 && broj3<broj2){
+    else if(broj3<=broj1 && broj3<=broj2){
         cout<<"Najmala vrednost ima brojot  "<<broj3<<endl;
     }
     else if (broj1==broj2 && broj1 == broj3 && broj2 == broj3){

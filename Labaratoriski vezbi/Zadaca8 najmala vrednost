@@ -1,0 +1,27 @@
+#include <iostream>
+//Да се испечати програма во која корисникот внесува 3 позитивни броја, а на излез треба
+//да отпечати кој од броевите има најмала вредност.
+//Доколку сите броеви имаат иста вредност да се отпечати порака дека станува збор
+//за три исти броја.
+
+using namespace std;
+
+int main() {
+
+    int broj1,broj2,broj3;
+    cin>>broj1>>broj2>>broj3;
+
+    if(broj1<broj2 && broj1<broj3){
+        cout<<"Najmala vrednost ima brojot  "<<broj1<<endl;
+    }
+    else if(broj2<broj1 && broj2<broj3){
+        cout<<"Najmala vrednost ima brojot  "<<broj2<<endl;
+    }
+    else if(broj3<broj1 && broj3<broj2){
+        cout<<"Najmala vrednost ima brojot  "<<broj3<<endl;
+    }
+    else if (broj1==broj2 && broj1 == broj3 && broj2 == broj3){
+        cout<<"Site tri broja imaat ista vrednost"<<endl;
+    }
+    return 0;
+}

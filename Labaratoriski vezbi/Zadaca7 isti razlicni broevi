@@ -1,0 +1,22 @@
+#include <iostream>
+using namespace std;
+
+//Да се напише програма за која на стандарен влез се внесуваат 3 броеви. Доколку броевите се исти или сите
+// различни на излез да се испечати 1, во спротивно да се испечати 0.
+
+int main() {
+
+    int broj1, broj2, broj3;
+    cin >> broj1 >> broj2 >> broj3;
+
+    if ((broj1 == broj2 && broj1 == broj3 && broj2 == broj3) || (broj1 != broj2 && broj1 != broj3 && broj2 != broj3))
+    {
+        cout << "1" << endl;
+    }
+     else
+     {
+        cout << "0" << endl;
+     }
+
+    return 0;
+}

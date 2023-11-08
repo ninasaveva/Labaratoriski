@@ -1,0 +1,51 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+
+    int vmv, skd, co2, gorivo, zasteda, zasteda_sredstva, meseci_na_isplata, mesecen_prihod, pbb, benzin, dizel;
+    float evro;
+    float kCO2;
+    cin >> vmv >> skd >> co2 >> gorivo >> zasteda >> zasteda_sredstva >> meseci_na_isplata >> mesecen_prihod;
+    if (vmv < 10000) {
+        pbb = 0;
+
+    } else if (vmv > 10000 && vmv < 20000) {
+        pbb = 0.05;
+
+    } else if (vmv > 20000 && vmv < 30000) {
+        pbb = 0.10;
+
+    } else if (vmv > 30000) {
+        pbb = 0.15;
+    }
+
+
+
+    if (gorivo == 0) {
+
+
+        else if (co2 > 0 && co2 < 75) {
+            kCO2 = 5.0;
+        } else if (co2 > 75) {
+            kCO2 = 15;
+        }
+        
+    }
+
+    if (gorivo == 1) {
+
+    else if (co2 > 0 && co2 < 75)
+        {
+            kCO2 = 10;
+        } else if (co2 > 75) {
+            kCO2 = 20;
+        }
+    }
+
+
+
+
+
+    return 0;
+}

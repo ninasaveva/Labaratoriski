@@ -1,0 +1,57 @@
+# include <iostream>
+using namespace std;
+//ponedelnik
+
+
+//Од тастатура се читаат два цели броеви
+//а, b. Да се испечатат сите парни
+// броеви кои што се деливи со 7 и сите
+//непарни броеви кои што не се деливи со
+//З во опсег (а, b]. Ако вакви броеви не
+//постојат да се испечати 0,а во
+//спротивно да се испечати колкав
+// процент од броевите ги исполнуваат
+//условите(односно ќе бидат испечатени)
+
+
+
+int main() {
+    int a, b;
+    int number;
+    cin >> a >> b;
+    int parni = 0, neparni = 0;
+
+    for (number = a + 1; number <= b; number++){
+        if (number % 2 == 0 && number % 7 == 0) {
+            cout << number << endl;
+            parni++;
+        } else if (number % 2 != 0 && number % 3 != 0) {
+            cout << number << endl;
+            neparni++;
+
+        }
+
+    }
+    if(parni == 0 && neparni == 0){
+        cout<<"0"<<endl;
+    }
+    else{
+        int zadovoliviBroevi=parni+neparni;
+        int Vkupnobroevi= b-a;
+        float Procent =(zadovoliviBroevi*100.0)/Vkupnobroevi;
+        cout<<Procent<<endl;
+    }
+
+    return 0;
+}
+
+
+
+
+
+
+
+
+
+
+

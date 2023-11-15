@@ -1,0 +1,45 @@
+#include <iostream>
+
+using namespace std;
+
+//Напишете програма која чита два природни
+//броја, почеток и крај, од стандардниот влез
+//  Потоа програмата треба да ги пронајде и
+//отпечати палиндромите во опсегот [почеток,
+// крајl. Палиндром се дефинира како број што
+//  останува ист и кога неговите цифри се во
+// обратен редослед
+//  Ваша задача е да ги најдете најмалите и
+//  најголемите палиндроми во дадениот опсег
+int main() {
+
+    int A, B;
+    cin>>A>>B;
+
+    int broj;
+    int max, min;
+    for(broj=A; broj<=B; broj++){
+
+        int tmp=broj;
+        int reverse = 0;
+        while(tmp>0){
+            int cifra = tmp%10;
+            reverse = reverse * 10 + cifra;
+            tmp=tmp/10;}
+
+            if(reverse == broj ){
+                if(broj>=max){
+                 max = broj;
+                }
+                if (broj<=min) {
+                    min=broj; }
+            }
+
+    }
+
+    cout<<max<<endl;
+    cout<<min;
+
+
+    return 0;
+}

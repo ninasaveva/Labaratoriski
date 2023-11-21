@@ -1,0 +1,48 @@
+#include <iostream>
+
+//Да се напише програма која ќе прочита
+//        два природни броја. Програмата треба
+//да провери дали цифрите на непарна
+//позиција од првиот број се на парна
+//        позиција во вториот број.
+//Ако овој услов е исполнет, програмата
+//        печати DА, во спротивно NЕ
+//        Првата цифра се наоѓа на Ота позиција
+//почнувајќи од лево
+
+using namespace std;
+int main(){
+
+   int a,b;
+   cin>>a>>b;
+   int parni=0;
+   int neparni=0;
+
+   int tmp=a;
+   while(tmp>0){
+       int cifra = tmp%10;
+       tmp/=10;
+       if(cifra%2==0){
+           parni++;
+       }
+
+
+   }
+   int tmp2=b;
+   while(tmp2>0){
+       int cifra2 = tmp2%10;
+       tmp2/=10;
+
+       if(cifra2%2!=0){
+           neparni++;
+       }
+   }
+
+  if(parni==neparni){
+      cout<<"Da"<<endl;}
+      else{
+          cout<<"NE";
+      }
+
+    return 0;
+}

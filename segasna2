@@ -1,0 +1,43 @@
+#include <iostream>
+
+using namespace std;
+
+// Function to reverse a number
+int reverse(int number) {
+    int reversed = 0;
+    while (number > 0) {
+        reversed = reversed * 10 + number % 10;
+        number /= 10;
+    }
+    return reversed;
+}
+
+// Function to check if a number is a palindrome
+bool isPalindrome(int number) {
+    return number == reverse(number);
+}
+
+// Function to find the largest palindrome in the range [start, end]
+int findLargest(int start, int end) {
+    int largestPalindrome = 0;
+    for (int i = start; i <= end; ++i) {
+        if (isPalindrome(i) && i > largestPalindrome) {
+            largestPalindrome = i;
+        }
+    }
+    return largestPalindrome;
+}
+
+int main() {
+    int start, end;
+
+    // Read the start and end values from the user
+    cout << "Enter the start and end values: ";
+    cin >> start >> end;
+
+    // Find and print the largest palindrome in the range [start, end]
+    int largestPalindrome = findLargest(start, end);
+    cout << "Largest Palindromic Number in the range [" << start << ", " << end << "]: " << largestPalindrome << endl;
+
+    return 0;
+}

@@ -1,0 +1,39 @@
+#include <iostream>
+
+using namespace std;
+
+bool digitsInSecondNumber(int number1, int number2) {
+    bool digits[10] = {false};
+
+    while (number1 > 0) {
+        digits[number1 % 10] = true;
+        number1 /= 10;
+    }
+
+    while (number2 > 0) {
+        if (!digits[number2 % 10]) {
+            return false;
+        }
+        number2 /= 10;
+    }
+
+    return true;
+}
+
+int main() {
+    int p;
+    cin >> p;
+
+    for (int i = 0; i < p; ++i) {
+        int num1, num2;
+        cin >> num1 >> num2;
+
+        if (digitsInSecondNumber(num1, num2)) {
+            cout << "YES" << endl;
+        } else {
+            cout << "NO" << endl;
+        }
+    }
+
+    return 0;
+}

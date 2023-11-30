@@ -1,0 +1,41 @@
+#include <iostream>
+
+using namespace std;
+
+
+int countOccurrence(int number, int digit) {
+    int count = 0;
+
+    while (number > 0) {
+
+        if ( number % 10 == digit) {
+            count++;
+        }
+        number /= 10;
+    }
+    return count;
+}
+
+void NajdiGiBroevite(int m, int n, int p) {
+    int count = 0;
+    int num1 = m + 1;
+
+
+    while (count < 10) {
+        if (countOccurrence(num1, n) == p && num1 > m) {
+            cout << num1 << endl;
+            count++;
+        }
+        num1++;
+    }
+}
+
+int main() {
+    int m, n, p;
+
+    cin >> m >> n >> p;
+
+    NajdiGiBroevite(m, n, p);
+
+    return 0;
+}

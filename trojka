@@ -1,0 +1,36 @@
+#include<iostream>
+
+using namespace std;
+bool isFirst = true;
+
+int TrojkaCeliBroevi(int a, int b, int c) {
+    int ab, bc;
+    if (a - b < 0) {
+        ab = (a - b) * -1;
+    } else
+        ab = (a - b) * 1;
+    if (b - c < 0) {
+        bc = (b - c) * -1;
+    } else
+
+        bc = (b - c) * 1;
+    int d = ab + bc;
+    return d;
+}
+
+int main() {
+    int n, a, b, c, min;
+    cin >> n;
+    for (int i = 0; i < n; i++) {
+        cin >> a >> b >> c;
+        TrojkaCeliBroevi(a, b, c);
+        if (isFirst) {
+            min = TrojkaCeliBroevi(a, b, c);
+            isFirst = false;
+        } else if (min > TrojkaCeliBroevi(a, b, c)) {
+            min = TrojkaCeliBroevi(a, b, c);
+        }
+
+    }
+    cout << min << endl;
+}
